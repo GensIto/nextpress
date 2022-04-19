@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project
 
-## Getting Started
+今回のプロジェクトは、Udemy で[Next.js](https://www.udemy.com/course/nextjs-tailwind-css-django-rest-framework-react/)を勉強したのでそれをベースに使用し自分がしたい[react-three-fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)と[Wordpress](https://wordpress.org/download/)を使用し,3D と Headles CMS の開発の基本になるものを作ってみたかった
+そして自分のアウトプットに自分で開発したものを使用したらモチベーションになると考えたからです
 
-First, run the development server:
+# 採用技術
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### wordpress
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+wordpress 5.9.3
+本当はプラグインに[wp-GraohQL](https://www.wpgraphql.com/)を使いたかったが**2022/4/19**時点で 1.8v がなぜか使えないため
+[WP-REST-API-Controller](https://wordpress.org/plugins/wp-rest-api-controller/)を使用した
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Next.js
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+フロントエンドには[Next.js](https://nextjs.org/)を採用
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### style
 
-## Learn More
+style には[tailwind](https://tailwindcss.com/docs/guides/nextjsを使用
 
-To learn more about Next.js, take a look at the following resources:
+### 3D
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3D には[react-three-fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)を使用
+[Three.js](https://threejs.org/)が楽にかけるためなんか知ってるぐらいでしますので出来てしまうのでしまうので要復習
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 参考
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- wordpress で取得してきた content の p タグが出力されてしまうのでそれを消したい
+  - [JavaScript で HTML タグを削除する正規表現](https://qiita.com/miiitaka/items/793555b4ccb0259a4cb8)
+- 3D オブジェクトを表示したい
+  - [Next.js + react-three-fiber を使って.glb ファイルを表示した時のメモ](https://0ops.dev/posts/nextjs-and-react-three-fiber)
+  - [react-three-fiber/drei で 3D モデルビューを手軽に実装する](https://zenn.dev/ryotarohada/articles/e3322dcdf80b66)
+- Next.js
+  - [Nextjs + Tailwind CSS + Django REST Framework で学ぶモダン React 開発](https://www.udemy.com/course/nextjs-tailwind-css-django-rest-framework-react/)

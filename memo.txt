@@ -1,0 +1,6 @@
+## エンドポイント url
+- https://ate-u.heteml.net/test/ito_test/wp/nextpress/wp-json/wp/v2/posts
+
+adminUrl: https://ate-u.heteml.net/test/ito_test/wp/nextpress/wp-admin/
+id: gens
+paw: .wbx/#$S_us/~!e8*X8jr
