@@ -4,3 +4,7 @@
 adminUrl: https://ate-u.heteml.net/test/ito_test/wp/nextpress/wp-admin/
 id: gens
 paw: .wbx/#$S_us/~!e8*X8jr
+
+
+## フロントurl
+https://nextpress-gensito.vercel.app/

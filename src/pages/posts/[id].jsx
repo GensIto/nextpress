@@ -8,8 +8,9 @@ export default function Post({ post }) {
   }
 
   // 返ってきたJSONのcontentの中にある<p>タグを消す
-  const content = post.excerpt.rendered;
-  const contentString = content.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "");
+  const content = post.content.rendered;
+  // const contentString = content.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "");
+  const contentString = content;
   console.log(contentString);
 
   return (
@@ -19,7 +20,10 @@ export default function Post({ post }) {
         {post.id}
       </p>
       <p className="mb-8 text-xl font-bold">{post.title.rendered}</p>
-      <p className="px-10">{contentString}</p>
+      <p
+        className="px-10"
+        dangerouslySetInnerHTML={{ __html: contentString }}
+      ></p>
       <Link href="/blog-page">
         <div className="flex cursor-pointer mt-12">
           <svg
@@ -43,10 +47,10 @@ export default function Post({ post }) {
 
 export async function getStaticPaths() {
   const paths = await getAllPostIds();
-  
+
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 }
 export async function getStaticProps({ params }) {
@@ -54,6 +58,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post,
+      revalidate: 10,
     },
   };
 }
