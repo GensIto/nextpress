@@ -43,9 +43,9 @@ export default function Hamburger() {
                   Contact
                 </a>
               </Link>
-              <Link href="/skill-work">
+              <Link href="/skill">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Skill/Work
+                  Skills
                 </a>
               </Link>
             </MenuActive>
@@ -66,9 +66,9 @@ export default function Hamburger() {
                   Contact
                 </a>
               </Link>
-              <Link href="/skill-work">
+              <Link href="/skill">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Skill/Work
+                  Skills
                 </a>
               </Link>
             </Menu>
@@ -164,8 +164,8 @@ const Menu = styled.div`
 const MenuActive = styled.div`
   flex-direction: column;
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 50px;
+  right: 0;
   padding: 0 1rem 1rem 0;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 `;

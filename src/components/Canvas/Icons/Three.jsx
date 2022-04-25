@@ -3,7 +3,7 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 function Scene() {
-  const TextureMap = useLoader(TextureLoader, "nextjs.jpg");
+  const TextureMap = useLoader(TextureLoader, "three.jpg");
   const [clicked, setClicked] = useState(false);
   const handleSize = () => {
     setClicked(!clicked);
@@ -20,7 +20,7 @@ function Scene() {
   );
 }
 
-export default function NextIcon() {
+export default function ThreeIcon() {
   return (
     <Canvas className="h-full">
       <Suspense fallback={null}>

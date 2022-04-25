@@ -3,18 +3,18 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 function Scene() {
-  const wordpressMap = useLoader(TextureLoader, "wordpress.jpg");
-  const [isClicked, setIsClicked] = useState(false);
+  const TextureMap = useLoader(TextureLoader, "wordpress.jpg");
+  const [clicked, setClicked] = useState(false);
   const handleSize = () => {
-    setIsClicked(!isClicked);
+    setClicked(!clicked);
   };
   return (
     <>
       <ambientLight intensity={1} />
       <directionalLight />
-      <mesh onClick={handleSize} scale={isClicked ? 1.3 : 1}>
+      <mesh onClick={handleSize} scale={clicked ? 1.1 : 1}>
         <planeBufferGeometry attach="geometry" args={[5, 5]} />
-        <meshStandardMaterial map={wordpressMap} color="#fff" />
+        <meshStandardMaterial map={TextureMap} color="#fff" />
       </mesh>
     </>
   );
@@ -22,7 +22,7 @@ function Scene() {
 
 export default function WordpressIcon() {
   return (
-    <Canvas className="m-4 h-full">
+    <Canvas className="h-full">
       <Suspense fallback={null}>
         <Scene />
       </Suspense>
