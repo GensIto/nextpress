@@ -16,3 +16,17 @@ a {
 * {
     box-sizing: border-box;
 }
+
+.jsScroll {
+    opacity: 0;
+    display: block;
+    transform: translateY(10px);
+    transition: 1s;
+}
+
+.jsScroll.jsActive {
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+    transition: 1s;
+}
